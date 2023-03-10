@@ -13,6 +13,7 @@ body {
   opacity: 0.3;
   position: absolute;
   display: none;
+  top: -10px;
 }
 
 .nav_container {
@@ -37,7 +38,8 @@ body {
   display: none;
   flex-direction: column;
   position: relative;
-  right: 0;
+  top: -25px;
+  right: -12px;
   background-color: hsl(0, 0%, 98%);
 }
 .nav_container .secciones .menu_close {
@@ -62,6 +64,9 @@ body {
 }
 .nav_container .secciones .features_list .features_up {
   display: none;
+  padding-left: 10px;
+  width: 15px;
+  height: 20px;
 }
 .nav_container .secciones .features_list .features_down {
   padding-left: 10px;
@@ -109,12 +114,18 @@ body {
 }
 .nav_container .secciones .company_list .company_up {
   display: none;
+  padding-left: 10px;
+  width: 15px;
+  height: 10px;
+  transition: 0.4ms;
+  transition: all 0.5ms;
 }
 .nav_container .secciones .company_list .company_up:hover {
   cursor: pointer;
 }
 .nav_container .secciones .company_list .company_down {
   padding-left: 10px;
+  transition: 0.4ms;
 }
 .nav_container .secciones .company_list .company_down:hover {
   cursor: pointer;

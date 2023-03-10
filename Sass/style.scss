@@ -21,6 +21,7 @@ body{
     opacity: 0.3;
     position: absolute;
     display: none;
+    top: -10px;
     
 }
 .nav_container{
@@ -47,8 +48,8 @@ body{
         display: none;
         flex-direction:column;
         position: relative;
-        
-        right:0;
+        top:-25px;
+        right:-12px;
         
         background-color: $AlmostWhite;
         .menu_close{
@@ -78,8 +79,13 @@ body{
             cursor: pointer;
         }
         .features_list{
+            
             .features_up{
                 display: none;
+                padding-left: 10px;
+                
+                width: 15px;
+                height: 20px;
             }
 
             .features_down{
@@ -140,12 +146,18 @@ body{
     .company_list{
         .company_up{
             display: none;
+            padding-left: 10px;
+            width: 15px;
+            height: 10px;
+            transition: 0.4ms;
+            transition: all 0.5ms;
         }
         .company_up:hover{
             cursor: pointer;
         }
         .company_down{
             padding-left: 10px;
+            transition: 0.4ms;
         }
         .company_down:hover{
             cursor: pointer;
