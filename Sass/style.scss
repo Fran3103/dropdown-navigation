@@ -8,9 +8,11 @@ $AlmostBlack: hsl(0, 0%, 8%);
 $font: 'Epilogue';
 
 body{
-    background-color: $AlmostWhite;
+    background-color:#fafafa;
     font-family: $font;
     font-size: 1.1rem;
+    
+    
 }
 .capa{
     background-color: $AlmostBlack;
@@ -64,23 +66,54 @@ body{
             }
             
         }
+
+        
         a{
             text-decoration: none;
             color: $MediumGray;
+        }
+
+        a:hover{
+            color:$AlmostBlack;
+            cursor: pointer;
         }
         .features_list{
             .features_up{
                 display: none;
             }
+
             .features_down{
                 padding-left: 10px;
             }
-            
+            .features_down:hover{
+                cursor: pointer;
+                color: $AlmostBlack;
+            }
+            .features_up:hover{
+                cursor: pointer;
+            }
             .features_list_sub {
                 display: none;
                 padding:20px;
                 list-style: none;
                 text-align: left;
+
+                .iconos{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 23px;
+                    margin-top: 10px;
+                    width: 25px;
+                }
+
+                .listaIconos{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: self-start;
+                    justify-content: center;
+                }
                 
                 li{
                     .icon_list{
@@ -108,11 +141,18 @@ body{
         .company_up{
             display: none;
         }
+        .company_up:hover{
+            cursor: pointer;
+        }
         .company_down{
             padding-left: 10px;
         }
+        .company_down:hover{
+            cursor: pointer;
+        }
         .company_list_sub{
             display: none;
+            flex-direction: column;
             padding:20px;
             list-style: none;
             text-align: left;
@@ -140,11 +180,22 @@ body{
             font-size: 1.1rem;
         }
 
+        button:hover{
+            cursor: pointer;
+        }
+
+
         .register_btn{
             margin-top: 10px;
             border: 2px solid gray;
             border-radius: 10px;
             
+        }
+
+        .register_btn:hover{
+            cursor: pointer;
+            background-color: $AlmostBlack ;
+            color: $AlmostWhite;
         }
 
         
@@ -154,7 +205,7 @@ body{
 }
 
 .main_container{
-
+    margin: 0 auto;
     .imagen_principal{
         margin-top: 20px;
         margin-bottom: 40px;
@@ -195,8 +246,15 @@ body{
             color: $AlmostWhite;
             background-color: $AlmostBlack;
             border-style: none;
-            border-radius: 15px;
+            border-radius: 10px;
             margin-bottom: 20px;
+            border: 2px solid  black;
+        }
+        .learn_btn:hover{
+            background-color: $AlmostWhite;
+            color: $AlmostBlack;
+            cursor: pointer;
+            border: 2px solid gray;
         }
 
         .clientes{
@@ -225,3 +283,372 @@ footer{
     display: none;
 }
 
+
+@media screen and (min-width: 720px) {
+
+    .nav_container{
+        width: 100vw;
+        align-items: center;
+        .logo{
+            margin-top:5px;
+        }
+        .menu{
+            margin-top: 0;
+            display: none;
+        }
+        .secciones{
+            .menu_close{
+                display: none;
+                
+            }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position:static;
+            background-color: none;
+            max-width: 2000px;
+            width: 100%;
+            flex-direction: row;
+            height: 100%;
+            padding: 0;
+
+
+            .menu_list{
+                display: flex;
+                justify-content: space-between;
+                gap: 30px;
+                align-items: center;
+                width: 100%;
+                margin-left: 40px;
+                margin-top: 0px;
+                .features_list{
+                    display: flex;
+                    align-items: center;
+
+                    .features_list_sub{
+                        display: none;
+                        flex-direction: row;
+                        width: 130px;
+                        height: 150px;
+                        padding: 20px;
+                        padding-left: 30px;
+                        font-size: 0.8rem;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        top: 80px;
+                        left: 100px;
+                        background-color: $AlmostWhite;
+                        border-radius: 10px;
+                        box-shadow: 0 0 15px 2px hsl(0, 0%, 41%, 0.2);
+                        .iconos{
+                            display: flex;
+                            flex-direction: column;
+                            gap:12px;
+                            margin-top: 0;
+                        }
+                        .listaIconos{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            align-items: flex-start;
+                        }
+
+                        li{
+                            .icon_list{
+                                width: 15px;
+                                
+                            }
+                            .icon-3{
+                                margin-left:   0px;
+                            }
+                            padding: 2px;
+                            text-align: left;
+                            a{
+                                padding-left: 10px;
+                            }
+                            
+                            .reminders{
+                                padding-left: 10px;
+                            }
+
+                        }
+                    }
+
+                    .features_down{
+                        width: 22px;
+                        height: 12px;
+                    }
+                    .features_up{
+                        width: 22px;
+                        height: 12px;
+                    }
+                }
+                .company_list{
+                    display: flex;
+                    align-items: center;
+                    .company_down{
+                        width: 22px;
+                        height: 12px;
+                    }
+                    .company_up{
+                        width: 22px;
+                        height: 12px;
+                    }
+
+                    .company_list_sub{
+                        display: none;
+                        flex-direction: column;
+                        width: 120px;
+                        padding: 5px;
+                        font-size: 0.8rem;
+                        justify-content: center;
+                        align-items:start;
+                        position: absolute;
+                        top: 80px;
+                        left: 280px;
+                        background-color: $AlmostWhite;
+                        border-radius: 10px;
+                        box-shadow: 0 0 15px 2px hsl(0, 0%, 41%, 0.2) ;
+
+                    }
+                }
+
+            }
+
+            .login{
+                flex-direction: row;
+                justify-content: flex-end;
+                height: 50px;
+                width: 100%;
+                padding: 10px;
+                margin-top: 0;
+                margin-right: 20px ;
+                gap: 10px;
+                align-items: center;
+
+                button{
+                    padding: 10px 20px;
+
+                }
+
+                .register_btn{
+                    margin-top: 0;
+                }
+
+            }
+        }
+    }
+    
+
+
+    .main_container{
+        margin: 0 40px;
+        width: 700px;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 100px;
+
+            .imagen_principal{
+                .img_desktop{
+                    display: inline-block;
+                    width: 300px;
+                }
+
+                .img_mobile{
+                    display: none;
+                }
+    }
+
+    .primera_seccion{
+        margin-top: 100px;
+        text-align: left;
+        width: 300px;
+        
+        .title{
+            font-size: 2.4rem;
+            padding-right: 40px;
+        }
+
+        .txt{
+            margin: 0;
+            margin-bottom: 40px;
+            font-size: 0.8rem;
+            padding-right: 0px;
+        }
+
+        .learn_btn{
+            font-size: 0.8rem;
+        }
+        
+        .clientes{
+            margin-top: 70px;
+            justify-content: space-between;
+        }
+    }
+    }
+}
+
+@media screen and (min-width:1020px) {
+
+    .main_container{
+        margin: 0 100px;
+        width: 1000px;
+        justify-content: space-between;
+        
+        .imagen_principal{
+            .img_desktop{
+                width: 350px;
+                margin-right: 200px;
+            }
+        }
+        .primera_seccion{
+            width: 450px;
+
+            .clientes{
+                margin-top: 100px;
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    .nav_container{
+        width: 90%;
+        margin-left: 60px;
+        .secciones{
+            .menu_list{
+            justify-content: flex-start;
+
+            .features_list{
+                .features_list_sub{
+                    left: 180px;
+                }
+            }
+            .company_list{
+                .company_list_sub{
+                    left: 340px;
+                }
+            }
+            }
+        }
+    }
+    .main_container{
+        width: 1150px;
+        margin-left: 200px;
+
+        .imagen_principal{
+            .img_desktop{
+                margin-top: 40px;
+                width: 500px;
+                height: 600px;
+                
+            }
+        }
+
+        .primera_seccion{
+            margin-top: 150px;
+            width: 500px;
+            .title{
+                font-size: 3rem;
+                padding-right: 25px;
+            }
+
+            .learn_btn{
+                font-size: 1rem;
+            }
+
+            .clientes{
+                margin-top: 120px;
+                gap: 20px;
+                img{
+                    width:90px;
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width:1400px) {
+
+    .nav_container{
+        margin-top:30px;
+    
+        .secciones{
+            .menu_list{
+                
+                justify-content: flex-start;
+                .features_list{
+                    .features_list_sub{
+                        top: 120px;
+                        left: 150px;
+                        width: 160px;
+                        height: 180px;
+                        font-size: 1rem;
+                        .iconos{
+                            gap: 15px;
+                        }
+                        .listaIconos{
+                            gap: 12px;
+                        }
+                    }
+                }
+                .company_list{
+                    .company_list_sub{
+                        top: 120px;
+                        width: 140px;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .main_container{
+        width: 1200px;
+        gap: 0px;
+        margin-left: 120px;
+        .imagen_principal{
+            .img_desktop{
+                width: 580px;
+                height: 650px;
+                margin-right: 50px;
+                margin-top: 75px;
+            }
+        }
+        .primera_seccion{
+            width: 500px;
+            margin-top: 200px;
+            .title{
+                font-size: 4rem;
+                padding-right: 70px;
+                margin-bottom: 50px;
+            }
+            .txt{
+                font-size: 1rem;
+                padding-right: 100px;
+                margin-bottom: 50px;
+            }
+
+            .learn_btn{
+                font-size: 1.1rem;
+            }
+
+            .clientes{
+                justify-content: flex-start;
+                img{
+                    width: 100px;
+                }
+            }
+        }
+    }
+
+
+}
